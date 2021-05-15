@@ -1,20 +1,50 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Society Manager
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## Introduction
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+A small project for my internship of 2021, the main objective was to get familiarized with technologies such as [ASP.NET Core](https://github.com/aspnet/Home), [Entity Framework Core 3.1](https://docs.microsoft.com/en-us/ef/core/) (server-side) and [Vue.js](https://vuejs.org/) (client-side).
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+The SPA (Single Page Application) uses basic CRUD operations for managing a society.
+The API is built with `ASP.NET Core` and the client-side with `Vue.js`.
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
+The current application uses an In-Memory Database but can be switched to a SQL Server Database if desired.
+
+Made with:
+
 - [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+- [Entity Framework Core 3.1](https://docs.microsoft.com/en-us/ef/core/)
+- [AutoMapper](https://automapper.org/)
+- [Vue.js](https://vuejs.org/)
+- [Vuex](https://vuex.vuejs.org/)
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Auth0](https://auth0.com/)
+
+Note: The My Societies page is currently inaccessible (it requires Auth0 authentication and permissions)
+
+## Requirements
+
+- [Visual Studio](https://visualstudio.microsoft.com/)
+- [npm](https://www.npmjs.com/get-npm)
+
+## Installation
+
+Navigate to the the `society-manager-ui` folder and use npm to install the node modules with:
+
+  ```bash
+  npm install
+  ```
+
+## Getting Started
+
+1. To start the application the `SocietyManager.sln` project must be opened with Visual Studio.
+From there you can start up the server with `IIS Express`.
+
+2. To start the vue application, use the following command from within the `society-manager-ui` folder:
+
+    ```bash
+    npm run serve
+    ```
+
+3. Then open following link in your browser: <http://localhost:8080/>
+
+To view the API's documentation start the server-side (1.) then open the following link in your browser: <https://localhost:44364/swagger/index.html>
