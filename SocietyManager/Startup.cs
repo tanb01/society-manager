@@ -24,17 +24,10 @@ namespace SocietyManager
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
+            services.AddDbContextPool<ApiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SocietyManagerDb")));
 
             // Comment line above and uncomment line below to use In-Memory Database
-            var inMemoryDatabase = Configuration.GetValue<bool>("InMemoryDatabase");
-            if (inMemoryDatabase)
-            {
-                services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "InMemorySocietyManagerDb"));
-            }
-            else
-            {
-                services.AddDbContextPool<ApiContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SocietyManagerDb")));
-            }
+            //services.AddDbContext<ApiContext>(opt => opt.UseInMemoryDatabase(databaseName: "InMemorySocietyManagerDb"));
 
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 

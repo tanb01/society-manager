@@ -1,86 +1,20 @@
-# Society Manager
+# Introduction 
+TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
 
-## Introduction
+# Getting Started
+TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+1.	Installation process
+2.	Software dependencies
+3.	Latest releases
+4.	API references
 
-A small project for my internship of 2021, the main objective was to get familiarized with technologies such as [ASP.NET Core](https://github.com/aspnet/Home), [Entity Framework Core 3.1](https://docs.microsoft.com/en-us/ef/core/) (server-side) and [Vue.js](https://vuejs.org/) (client-side).
+# Build and Test
+TODO: Describe and show how to build your code and run the tests. 
 
-The SPA (Single Page Application) uses basic CRUD operations for managing a society.
-The API is built with `ASP.NET Core` and the client-side with `Vue.js`.
+# Contribute
+TODO: Explain how other users and developers can contribute to make your code better. 
 
-The current application uses an In-Memory Database but can be switched to a SQL Server Database if desired.
-
-Made with:
-
+If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
 - [ASP.NET Core](https://github.com/aspnet/Home)
-- [Entity Framework Core 3.1](https://docs.microsoft.com/en-us/ef/core/)
-- [AutoMapper](https://automapper.org/)
-- [Vue.js](https://vuejs.org/)
-- [Vuex](https://vuex.vuejs.org/)
-- [Vuetify](https://vuetifyjs.com/en/)
-- [Auth0](https://auth0.com/)
-
-Note: IIExpress is required to run the API in local. The My Societies page is currently inaccessible (it requires Auth0 authentication and permissions)
-
-## Requirements
-
-- [Visual Studio](https://visualstudio.microsoft.com/)
-- [npm](https://www.npmjs.com/get-npm)
-- [IISExpress](https://www.npmjs.com/get-npm)
-- [Auth0](https://auth0.com/)
-
-## Installation
-
-Navigate to the the `society-manager-ui` folder and use npm to install the node modules with:
-
-  ```bash
-  npm install
-  ```
-
-## Getting Started
-
-1. To start the application the `SocietyManager.sln` project must be opened with Visual Studio. Firstly, start by configuring the `launchSettings.json` file located under `Properties` in the `SocietyManager` folder. It should look something like this:
-
-```js
-{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:3571/",
-      "sslPort": 44364
-    }
-  },
-  "profiles": {
-    "IIS Express": {
-      "commandName": "IISExpress",
-      "launchBrowser": false,
-      "launchUrl": "api/societies",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      }
-    },
-    "SocietyManager": {
-      "commandName": "Project",
-      "launchBrowser": false,
-      "launchUrl": "api/societies",
-      "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
-      },
-      "applicationUrl": "https://localhost:5001;http://localhost:5000"
-    }
-  }
-}
-```
-2. Meanwhile under the `society-manager-ui` folder, add the `.env` which will contain the API's url, for example `https://localhost:44364/api` (the same SSL Port defined in `launchSettings.json`). Finally, add the `auth_config.json` by following the respective `.example` file, the information can be found on [Auth0](https://auth0.com/).
-
-3. Now you can start up the server with `IIS Express`.
-
-4. To start the vue application, use the following command from within the `society-manager-ui` folder:
-
-    ```bash
-    npm run serve
-    ```
-
-5. Then open the following link in your browser: <http://localhost:8080/>
-
-To view the API's documentation start the server-side (1.) then open the following link in your browser: <https://localhost:44364/swagger/index.html>
+- [Visual Studio Code](https://github.com/Microsoft/vscode)
+- [Chakra Core](https://github.com/Microsoft/ChakraCore)

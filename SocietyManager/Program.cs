@@ -26,7 +26,7 @@ namespace SocietyManager
                 try
                 {
                     // Call the InMemoryData to create sample data
-                    InMemoryData.Initialize(services);
+                    //InMemoryData.Initialize(services);
                     var context = services.GetRequiredService<ApiContext>();
 
                     if (context.Database.IsSqlServer())
